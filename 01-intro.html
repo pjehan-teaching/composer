@@ -1,0 +1,126 @@
+<section data-background="#002b36" class="first">
+    <h1>Composer</h1>
+
+    <p>Gestionnaire de paquets PHP</p>
+</section>
+
+<section data-background="#002b36" class="chapter">
+    <h2>Introduction</h2>
+</section>
+
+<section>
+    <h2>Introduction</h2>
+    <p>
+        Composer est un <strong>Gestionnaire de paquets</strong> pour le langage PHP.
+        Il permet d'installer rapidement des librairies externes avec une <strong>gestion des dépendances</strong>.
+    </p>
+    <footer>
+        <a href="https://getcomposer.org" class="info" target="_blank">Composer</a>
+    </footer>
+</section>
+
+<section data-background="#002b36" class="chapter">
+    <h2>Installation</h2>
+</section>
+
+<section>
+    <h2>Installation</h2>
+    <ol>
+        <li>Télécharger l'installeur</li>
+        <li>Installer localement</li>
+        <li>Installer globalement (optionnel)</li>
+    </ol>
+    <footer>
+        <a href="https://getcomposer.org/doc/00-intro.md" class="info" target="_blank">Installation</a>
+    </footer>
+</section>
+
+<section data-background="#002b36" class="chapter">
+    <h2>Utilisation</h2>
+</section>
+
+<section>
+    <h2>Initialisation</h2>
+    <p>
+        La commande <code class="terminal">composer init</code> permet d'initialiser un projet et de créer automatiquement le fichier <code>composer.json</code>.
+    </p>
+    <p>
+        Le fichier <code>composer.json</code> permet de décrire le projet (titre, version, description...) et de lister ses dépendances.
+    </p>
+</section>
+
+<section>
+    <h2>Ajout d'une dépendance</h2>
+    <p>
+        La commande <code class="terminal">composer require</code> permet d'installer une librairie externe.
+    </p>
+    <p>
+        Le fichier <code>composer.json</code> est alors mis à jour (ajout de la librairie installée dans la liste des dépendances).
+    </p>
+    <p>
+        Le fichier <code>composer.lock</code> est également créé / mis à jour. Ce fichier permet de s'assurer que l'ensemble des collaborateurs utilisent bien les mêmes versions des dépendances.
+    </p>
+    <footer>
+        <a href="#" class="info" style="font-size: 28px;" target="_blank">Les fichier composer.json et composer.lock doivent être versionnés</a>
+    </footer>
+</section>
+
+<section>
+    <h2>Ajout d'une dépendance</h2>
+    <p>
+        <strong>Packagist</strong> est le dépôt principal regroupant de nombreux paquets PHP publics.
+    </p>
+    <footer>
+        <a href="https://packagist.org/" class="info" target="_blank">Packagist</a>
+    </footer>
+</section>
+
+<section>
+    <h2>Ajout d'une dépendance</h2>
+    <p>
+        Ajoutez une dépendance à Twig afin d'importer le moteur de template dans votre projet :
+    </p>
+    <pre><code class="language-bash">composer require twig/twig:~2.0</code></pre>
+</section>
+
+<section>
+    <h2>Ajout d'une dépendance</h2>
+    <p>
+        Il est également possible de distinguer les dépendances de l'<strong>environnement</strong> de dev et de prod :
+    </p>
+    <pre><code class="language-bash">composer require --dev phpunit/phpunit ^6.2</code></pre>
+</section>
+
+<section>
+    <h2>Installation des dépendances</h2>
+    <p>
+        Lorsque vous récupérez la dernière version d'un projet, il est nécéssaire d'installer les depéndances du projet avec la commande suivante :
+    </p>
+    <pre><code class="language-bash">composer install</code></pre>
+    <pre><code class="language-bash">composer install --no-dev</code></pre>
+</section>
+
+<section>
+    <h2>Mise à jour des dépendances</h2>
+    <p>
+        Les versions des dépendances sont bloquées par le fichier <code>composer.lock</code>.
+        Cependant, il est possible de mettre à jour les dépendances en utilisant la commande suivante :
+    </p>
+    <pre><code class="language-bash">composer update</code></pre>
+</section>
+
+<section>
+    <h2>Suppression des dépendances</h2>
+    <p>
+        Vous pouvez supprimer une dépendance en utilisant la commande suivante :
+    </p>
+    <pre><code class="language-bash">composer remove phpunit/phpunit ^6.2</code></pre>
+</section>
+
+<section>
+    <h2>Autoloading</h2>
+    <p>
+        Composer fourni également un autoloader afin de simplifier l'utilisation des classes contenues dans les librairies importées.
+    </p>
+    <pre><code class="language-php">require __DIR__ . '/vendor/autoload.php';</code></pre>
+</section>
