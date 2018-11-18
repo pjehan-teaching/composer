@@ -1,0 +1,93 @@
+<section id="utilisation">
+
+    <section>
+        <h2>Utilisation</h2>
+    </section>
+
+    <section>
+        <h3>Initialisation</h3>
+        <p>
+            La commande <code class="language-bash">composer init</code> permet d'initialiser un projet et de créer automatiquement le fichier <code>composer.json</code>.
+        </p>
+        <p>
+            Le fichier <code>composer.json</code> permet de décrire le projet (titre, version, description...) et de lister ses dépendances.
+        </p>
+    </section>
+
+    <section>
+        <h3>Ajout d'une dépendance</h3>
+        <p>
+            La commande <code class="language-bash">composer require</code> permet d'installer une librairie externe.
+        </p>
+        <p>
+            Le fichier <code>composer.json</code> est alors mis à jour (ajout de la librairie installée dans la liste des dépendances).
+        </p>
+        <p>
+            Le fichier <code>composer.lock</code> est également créé / mis à jour. Ce fichier permet de s'assurer que l'ensemble des collaborateurs utilisent bien les mêmes versions des dépendances.
+        </p>
+        <footer>
+            <a href="#" class="info" style="font-size: 28px;" target="_blank">Les fichier composer.json et composer.lock doivent être versionnés</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Ajout d'une dépendance</h3>
+        <p>
+            <strong>Packagist</strong> est le dépôt principal regroupant de nombreux paquets PHP publics.
+        </p>
+        <footer>
+            <a href="https://packagist.org/" class="info" target="_blank">Packagist</a>
+        </footer>
+    </section>
+
+    <section>
+        <h3>Ajout d'une dépendance</h3>
+        <p>
+            Ajoutez une dépendance à Twig afin d'importer le moteur de template dans votre projet :
+        </p>
+        <pre><code class="language-bash">composer require twig/twig:~2.0</code></pre>
+    </section>
+
+    <section>
+        <h3>Ajout d'une dépendance</h3>
+        <p>
+            Il est également possible de distinguer les dépendances de l'<strong>environnement</strong> de dev et de prod :
+        </p>
+        <pre><code class="language-bash">composer require --dev phpunit/phpunit ^6.2</code></pre>
+    </section>
+
+    <section>
+        <h3>Installation des dépendances</h3>
+        <p>
+            Lorsque vous récupérez la dernière version d'un projet, il est nécéssaire d'installer les depéndances du projet avec la commande suivante :
+        </p>
+        <pre><code class="language-bash">composer install</code></pre>
+        <pre><code class="language-bash">composer install --no-dev</code></pre>
+    </section>
+
+    <section>
+        <h3>Mise à jour des dépendances</h3>
+        <p>
+            Les versions des dépendances sont bloquées par le fichier <code>composer.lock</code>.
+            Cependant, il est possible de mettre à jour les dépendances en utilisant la commande suivante :
+        </p>
+        <pre><code class="language-bash">composer update</code></pre>
+    </section>
+
+    <section>
+        <h3>Suppression des dépendances</h3>
+        <p>
+            Vous pouvez supprimer une dépendance en utilisant la commande suivante :
+        </p>
+        <pre><code class="language-bash">composer remove phpunit/phpunit ^6.2</code></pre>
+    </section>
+
+    <section>
+        <h3>Autoloading</h3>
+        <p>
+            Composer fourni également un autoloader afin de simplifier l'utilisation des classes contenues dans les librairies importées.
+        </p>
+        <pre><code class="language-php">require __DIR__ . '/vendor/autoload.php';</code></pre>
+    </section>
+
+</section>
