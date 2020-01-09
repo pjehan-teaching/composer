@@ -1,4 +1,5 @@
 module.exports = {
-    name: 'Composer',
-    stylesheets: ['assets/css/style.css']
-}
+  name: 'Composer',
+  stylesheets: [],
+  javascripts: ['assets/js/script.js']
+};
